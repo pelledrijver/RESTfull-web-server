@@ -1,0 +1,303 @@
+/* ----------------INITIAL SETUP-------------- */
+/* ---------------------------------------- */
+/* makes sure that all sections are the same width as the screen. Without this rule, the sections will behave very different */
+ *{
+     margin-left: 0;
+     margin-right: 0;
+}
+/* ----------HIGH-LEVEL STRUCTURE---------- */
+/* ---------------------------------------- */
+ html {
+     font-size: 20px;
+     font-family: 'Lato', 'Arial', sans-serif;
+     background-color: rgba(119, 166, 247, 0.03);
+     color: #555;
+     font-weight: 300;
+}
+ ::-webkit-scrollbar {
+    /* removes the vertical scrollbar */
+     display: none;
+}
+ section{
+     padding: 10px 0;
+     border-bottom: 4px solid black;
+}
+ h1{
+     text-transform: uppercase;
+     text-align: center;
+     text-decoration: solid;
+     font-size: 210%;
+     margin-top: 20px;
+     margin-bottom: 20px;
+     word-spacing: 3px;
+     letter-spacing: 2px;
+}
+ h2{
+     text-align: center;
+}
+/* ----------------NAVIGATION-------------- */
+/* ---------------------------------------- */
+ nav{
+     border-bottom: 4px solid black;
+}
+/* select unordered list */
+ .nav-list{
+     text-align: center;
+}
+ .nav-list li{
+     display: inline-block;
+    /* Do not break the new line, so list items side by side */
+     margin: 0 2%;
+}
+ .nav-list li a:link, .nav-list li a:visited{
+     padding: 6px 0;
+     text-decoration: none;
+     font-size: 110%;
+     border-bottom: 2px solid transparent;
+     transition: border 0.2s;
+     text-transform: uppercase;
+}
+ .nav-list li a:hover, .nav-list li :active{
+    /* flat ui to decide to colour */
+     border-bottom: 2px solid #3498db;
+}
+/* ----------------TABLE-------------- */
+/* ---------------------------------------- */
+ #topphones{
+     background-color: rgba(119, 166, 247, 0.1);
+}
+ table{
+     width: 85%;
+     margin: 10px auto;
+     text-align: center;
+     caption-side: top;
+     padding-bottom: 10px;
+}
+ th {
+     background-color: lightblue;
+}
+
+th.thbut{
+     background-color: transparent;
+}
+
+th:hover {
+  cursor: pointer;
+}
+ table img{
+     width: 6vw;
+     margin-bottom: 10px;
+     vertical-align: middle;
+     padding: 10px;
+     transition: transform .3s;
+}
+ table img:hover{
+     transform: scale(1.25);
+}
+ input {
+     width: 60%;
+     padding: 5px 10px;
+     display: inline-block;
+     border: 1px solid #ccc;
+     border-radius: 4px;
+     outline: none;
+}
+ input:focus{
+     background-color: rgb(250, 250, 256)
+}
+ .tablebutton {
+     border: 2px solid #77A6F7;
+     background-color: #77A6F7;
+     color: white;
+     padding: 12px 17px;
+     margin: 8px 0;
+     border-radius: 4px;
+     cursor: pointer;
+}
+ .tablebutton:hover, .tablebutton:active{
+     border-color: #5f90e3;
+     border-width: 2px;
+     border-style: solid;
+}
+
+.tablebutton2 {
+    border: 2px solid grey;
+    background-color: grey;
+    color: white;
+    padding: 12px 36px;
+    margin: 8px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.tablebutton2:hover, .tablebutton2:active{
+    border-color: #696969;
+    border-width: 2px;
+    border-style: solid;
+}
+ .formbutton{
+     text-align: center;
+}
+/* ----------------ABOUT-------------- */
+/* ---------------------------------------- */
+ .aboutdiv{
+     width: 80%;
+     margin: auto;
+     clear:both;
+}
+
+.aboutdiv > img{
+  width: 5%;
+  float:left;
+}
+
+ #about table{
+     text-align: left;
+     background-color: rgba(119, 166, 247, 0.05);
+     margin: 0;
+     border-spacing: 5px;
+}
+ #about table ol {
+     list-style-type: upper-roman;
+     list-style-position: inside;
+}
+
+ figure img {
+     width: 30%;
+}
+ figure figcaption {
+     font-variant: small-caps;
+     text-indent: 10%;
+}
+ .contactinfo pre{
+     font: italic bold 17px Georgia, serif;
+}
+/* ----------------Reviews-------------- */
+/* ---------------------------------------- */
+ .section-reviews{
+     text-align: center;
+     background-color: rgba(119, 166, 247, 0.1);
+}
+ blockquote{
+     font-style: italic;
+     line-height: 120%;
+     position: relative;
+     padding: 1%;
+     display: inline-block;
+}
+ .reviews{
+     display: inline-block;
+     overflow: hidden;
+     clear: both;
+     width: 400px;
+     margin-right: 20px;
+}
+ cite{
+     font-size: 90%;
+    /* We have made the inline element to block element */
+     overflow: hidden;
+}
+ blockquote:before{
+     content: "\201C";
+     font-size: 500%;
+     display: block;
+     position: absolute;
+     top: -5px;
+     left: 20px;
+}
+/* ----------------Branches-------------- */
+/* ---------------------------------------- */
+ dl{
+     display: block;
+     margin-top: 1em;
+     margin-bottom: 1em;
+     margin-left: 0;
+     margin-right: 0;
+     text-align: center;
+}
+ dl dt{
+     font-weight: 600;
+}
+ .col2{
+     display: inline-block;
+     padding-right: 30px;
+}
+ .exportimportlist{
+     width: 300px;
+     margin: auto;
+     text-align: center;
+   }
+ ul.importlist{
+     list-style-image: url('https://i.imgur.com/dUldpvq.png');
+     list-style-position: outside;
+}
+ ul.exportlist{
+     list-style: square outside none;
+}
+.backgroundrepeater{
+    padding-bottom: 20px;
+    background-image: url('https://i.imgur.com/s9X7zY3.png');
+    background-repeat: repeat-x;
+}
+/* ----------------Footer-------------- */
+/* ---------------------------------------- */
+ footer{
+     padding: 8px;
+     color: white;
+     background-image: url('https://coolbackgrounds.io/images/backgrounds/black/black-radial-gradient-bb05ed79.jpg');
+     text-align: center;
+}
+ footer li{
+     display: inline-block;
+     font-size: 90%;
+     padding-left: 30px;
+}
+ .footerlink{
+     color:white;
+     text-decoration:none;
+}
+
+/* --Media queries for responsive design-- */
+/* ---------------------------------------- */
+ @media screen and (max-width: 750px){
+     #topphones table{
+         width: 92%;
+    }
+     .aboutdiv{
+         width: 85%;
+    }
+     ul.importlist{
+         list-style: square outside none;
+    }
+}
+ @media screen and (max-width: 700px){
+     .above700pix{
+         display: none;
+    }
+     #topphones{
+         border-top: 4px solid black;
+    }
+     footer{
+         padding: 1px;
+         background: rgb(30,30,30);
+    }
+     footer li{
+         font-size: 70%;
+         padding:0;
+    }
+     table img:hover{
+         transform: none;
+    }
+}
+ @media screen and (max-width: 500px){
+     .reviews{
+         width:80%;
+    }
+}
+ @media screen and (max-width: 411px){
+     thead{
+         font-size: 80%;
+    }
+     table img{
+         width: 70%;
+    }
+}

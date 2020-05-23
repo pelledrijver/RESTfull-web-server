@@ -1,0 +1,46 @@
+@media print{
+     body{
+         font-size: 15px;
+         font-weight: 300;
+         font-family:'Arial', sans-serif;
+    }
+		.head{
+				page-break-after: avoid;
+	  }
+     .nav-list{
+         display: none;
+    }
+     button{
+         display: none;
+    }
+     input{
+         display: none;
+    }
+     .aboutdiv > img{
+         display: none;
+    }
+     .table{
+         border: 0;
+    }
+     address, #about, .table{
+         page-break-before: always;
+    }
+     .review-header{
+         orphans: 3;
+         page-break-after: avoid;
+    }
+     importlist{
+         list-style: square outside none;
+    }
+     blockquote:before{
+         content: none;
+    }
+     blockquote{
+         line-height: 105%;
+         padding: 0 5px;
+         widows: 2;
+    }
+     ul.importlist{
+         list-style: square outside none;
+    }
+}

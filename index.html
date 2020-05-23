@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>vufone - WebTech</title>
+    <link rel="stylesheet" type="text/css" href="css/screen.css">
+    <link rel="stylesheet" type="text/css" href="css/print.css">
+    <link href="https://fonts.googleapis.com/css?family=Lato:100,300,300i,400&display=swap" rel="stylesheet" type="text/css">
+    <link rel="shortcut icon" type="image/png" href="https://image.jimcdn.com/app/cms/image/transf/none/path/s6d177ecd04d21441/image/i1dfad90428ff7e41/version/1501752327/image.png" />
+    <script
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+  </head>
+  <body>
+    <!-- Header and Navigation-->
+    <header>
+      <h1>vufone</h1>
+      <nav class="above700pix">
+        <ul class="nav-list">
+          <li><a href="#topphones">Top Phones</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#custreviews">Reviews</a></li>
+          <li><a href="#our-branches">Our Branches</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- Page Content "Main"-->
+    <main>
+      <!-- Interactive Table-->
+      <section id="topphones">
+        <form method="post" action="https://wt.ops.labs.vu.nl/api20/b4bd861e">
+          <div>
+            <table id="table">
+              <caption>
+                <h2>Our top selling phones</h2>
+              </caption>
+              <thead>
+                <tr>
+                  <th>Image</th>
+                  <th>Brand</th>
+                  <th>Model</th>
+                  <th>OS</th>
+                  <th>Screen Size</th>
+                  <th class="thbut"></th>
+                  <th class="thbut"></th>
+                </tr>
+              </thead>
+              <tbody id="tbody">
+                <tr class="above700pix">
+                  <td>
+                    <input type="url" name="image" placeholder="Image link" required>
+                  </td>
+                  <td>
+                    <input type="text" name="brand" placeholder="Brand name" required>
+                  </td>
+                  <td>
+                    <input type="text" name="model" placeholder="Model name" required>
+                  </td>
+                  <td>
+                    <input type="text" name="os" placeholder="Enter OS" required>
+                  </td>
+                  <td>
+                    <input type="number" name="screensize" placeholder="Screen size" min="1" required>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="formbutton above700pix">
+            <button class="tablebutton" type="submit" name="postbutton">Add a new phone</button>
+          </div>
+        </form>
+        <div class="formbutton above700pix">
+          <button class="tablebutton2" name="button">Reset table</button>
+        </div>
+      </section>
+      <!-- About-->
+      <section id="about">
+        <div class="aboutdiv">
+          <h2>About us</h2>
+          <img class="above700pix" src="https://image.jimcdn.com/app/cms/image/transf/none/path/s6d177ecd04d21441/image/i1dfad90428ff7e41/version/1501752327/image.png" alt="picture of logo">
+          <p>
+            Welcome to <strong><abbr title="blend word of VU and phone">vufone</abbr></strong>! This fictitious smartphone
+            webshop is part of our Web Technology assignments of academic year 2019/2020. The web page has been built by
+            <em>Pelle Drijver</em> and <em>Selim Can Mutlu</em>. If you have any questions or want to contact us, feel free to
+            <a href="mailto:p.r.drijver@student.vu.nl">send us an email</a>.
+          </p>
+          <table id="table2">
+            <thead>
+              <tr>
+                <th>List of partners:</th>
+                <th>CEO name</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Apple</td>
+                <td>Lorem</td>
+              </tr>
+              <tr>
+                <td>Nokia</td>
+                <td>Ipsum</td>
+              </tr>
+              <tr>
+                <td>Tele2</td>
+                <td>Dolor</td>
+              </tr>
+            </tbody>
+          </table>
+          <figure>
+            <img src="http://musvanhetdak.nl/wp-content/uploads/2017/10/VU-Logo.png" alt="Trulli">
+            <figcaption><em>Our school</em></figcaption>
+          </figure>
+          <div class="contactinfo">
+            <!-- we understand that the identation of this part is a bit weird. Because we used <pre>, we moved the
+              text between the opening and ending tag all the way to the left to prevent the browser from printing
+              unintended whitespace. We asked the TA if this was allowed, and she said it wouldn't be a problem. -->
+            <address>
+              <pre>
+  <a href="https://goo.gl/maps/X1qkrjcGzVEggsWF7">Our Address:</a>
+  VU Amsterdam Main building
+  De Boelelaan 1105
+  1081 HV Amsterdam
+  The Netherlands
+                       </pre>
+            </address>
+          </div>
+        </div>
+      </section>
+      <!-- Reviews-->
+      <section id="custreviews" class="section-reviews">
+        <h2>Customer Reviews</h2>
+        <div>
+          <div class="reviews">
+            <cite>Kimberley Wilkerson</cite>
+            <blockquote>
+              Everything was above expectations, nice people, communicative! Quality merchandise!
+            </blockquote>
+          </div>
+          <div class="reviews">
+            <cite>Jonathan Frank</cite>
+            <blockquote>
+              Best phone shop ever- lovely people, know their stuff and deliver on their promises.
+            </blockquote>
+          </div>
+          <div class="reviews">
+            <cite>Elsie Ward</cite>
+            <blockquote>
+              Pretty cool process. Very responsive to questions and delivered the order in time.
+            </blockquote>
+          </div>
+        </div>
+      </section>
+      <!-- Branches-->
+      <section class="branch" id="our-branches">
+        <h2>Branches</h2>
+        <dl>
+          <div class="col2">
+            <dt>Amsterdam</dt>
+            <dd>Zuid</dd>
+            <dd>Oost</dd>
+          </div>
+          <div class="col2">
+            <dt>Alkmaar</dt>
+            <dd>Centrum</dd>
+            <dd>West</dd>
+          </div>
+        </dl>
+        <div class="exportimportlist">
+          <p><b> We also export to other countries:</b></p>
+          <ul class="importlist">
+            <li>Belgium</li>
+            <li>Germany</li>
+            <li>France</li>
+          </ul>
+          <p><b> And we import from:</b></p>
+          <ul class="exportlist">
+            <li>China</li>
+            <li>Pakistan</li>
+          </ul>
+        </div>
+        <div class="backgroundrepeater above700pix"></div>
+      </section>
+    </main>
+    <footer>
+      <ul class="footer-list">
+        <li>vufone ©. All rights reserved.</li>
+        <li class="above700pix"><a class="footerlink" href="mailto:p.r.drijver@student.vu.nl">Email</a></li>
+        <li class="above700pix"><a class="footerlink" href="https://studiegids.vu.nl/en/bachelor/2019-2020/computer-science">Course link</a></li>
+      </ul>
+    </footer>
+  </body>
+</html>
+<!--We have tested our website with various type of browsers such as Chrome, Firefox, Edge and Opera. To our
+  suprize, there were almost no differences visible between the browsers. We spotted minor some colouring
+  difference in edge browser. In addition to this, edge causes print to generate one additional blank page,
+  so the total number of papers are 4 in edge browser while the number is 3 in other browsers. We think
+  the reason why is because Edge makes print size much bigger, thus resulting in filling much more space
+  in print mode. We think that the webpage looked so similar on all browsers because of our development
+  process. We followed the progressive enhancement (mobile first) methodology/strategy,and this resulted
+  in a 'clean' and 'simple' web page, which is easy to interpret by web browsers. And, of course, the
+  foundations of standardization of HTML and css constructs (in for example HTML5) made sure that
+  structures are rendered very similar these days-->
